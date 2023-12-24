@@ -22,7 +22,7 @@
   }
   .sidebar {
     width: 345px;
-    @apply h-screen xl:h-auto bg-white;
+    @apply min-h-screen xl:min-h-0 bg-white;
     @media screen and (max-width: 1380px) {
       width: 20%;
     }

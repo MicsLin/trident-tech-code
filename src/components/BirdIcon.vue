@@ -102,10 +102,16 @@
     width: 150%;
     height: 100%;
     right: 0;
-    bottom: 45%;
+    bottom: 48%;
     border-radius: 100% 50%;
     background-color: white;
     transform: rotate(15deg);
     z-index: 2;
+}
+
+@media screen and (max-width: 1280px) {
+    .bird-lower-beak-right::after {
+        bottom: 45%;
+    }
 }
 </style>

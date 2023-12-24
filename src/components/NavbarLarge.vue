@@ -15,7 +15,7 @@ const navBar = ref(new NavBar())
         </section>
         <section class="sidebar--links fontWeight--light">
             <ul class="sidebar--ul">
-                <li class="text-center" v-for="(item, index) in navBar.links" :key="'links' + index">
+                <li class="text-center hover:transition-all hover:-translate-x-3 hover:scale-105" v-for="(item, index) in navBar.links" :key="'links' + index">
                     <a class="sidebar--a">{{ item?.name }}</a>
                 </li>
             </ul>
