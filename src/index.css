@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .Body {
+    max-width: 1920px;
+    min-height: 1000px;
+    min-width: 320px;
+    background-color: #dcccbc;
+    font-family: Noto Sans;
+    @apply w-full m-auto overflow-hidden;
+    @media screen and (max-width: 1280px) {
+      min-height: 100vh;
+    }
+  }
+  .fontWeight--bold {
+    @apply font-bold;
+  }
+  .fontWeight--light {
+    @apply font-normal;
+  }
+  .sidebar {
+    width: 345px;
+    @apply h-screen xl:h-auto bg-white;
+    @media screen and (max-width: 1380px) {
+      width: 20%;
+    }
+    @media screen and (max-width: 1280px) {
+      width: 100%;
+    }
+  }
+  .birdIcon {
+    @apply w-24 h-24 rounded-full border flex items-center justify-center text-black bg-white shadow;
+    @media screen and (max-width: 1380px) {
+      width: 72px;
+      height: 72px;
+    }
+    @media screen and (max-width: 1280px) {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  .sidebar--shadow {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    @apply xl:relative xl:z-50 overflow-hidden;
+  }
+  .sidebar--container {
+    @apply w-full flex items-center;
+  }
+  .sidebar--title {
+    @apply text-3xl xl:text-xl;
+  }
+  .sidebar--links {
+    transition: height 0.5s ease;
+    @apply w-full h-full xl:h-0 text-lg;
+  }
+  .sidebar--links.active {
+    height: 200px;
+  }
+  .sidebar--ul {
+    width: 127px;
+    height: 150px;
+    @apply flex flex-col justify-between m-auto;
+  }
+  .sidebar--a {
+    @apply cursor-pointer;
+  }
+  .sidebar--a:active {
+    color: #aa6666;
+    @apply underline;
+  }
+  .sidebar--hamburgerMenu {
+    @apply w-6 h-6 flex flex-col justify-around cursor-pointer overflow-hidden;
+  }
+  .hamburgerMenu--bar {
+    height: 3px;
+    @apply bg-black duration-500;
+  }
+  .banner {
+    width: 100%;
+    height: 635px;
+    background-size: 150%;
+    background-position: 90% 50%;
+    @apply flex justify-end items-end px-11 py-9 sm:p-6 sm:h-80 bg-no-repeat;
+    @media screen and (max-width: 800px) {
+      aspect-ratio: 1.2 / 1;
+      height: auto;
+    }
+  }
+  .banner--img {
+    width: 2200px;
+    left: -600px;
+    bottom: -250px;
+    @apply absolute z-0;
+    @media screen and (max-width: 1000px) {
+      width: 1500px;
+      left: -400px;
+      bottom: -150px;
+    }
+    @media screen and (max-width: 800px) {
+      width: 200%;
+      left: -70%;
+      bottom: -15%;
+    }
+  }
+  .banner--h2 {
+    height: 65px;
+    @apply text-right flex items-center justify-end text-5xl fontWeight--bold lg:h-auto;
+  }
+  .group {
+    width: 280px;
+    height: 225px;
+    padding: 0 5px;
+    @apply flex gap-9 lg:w-full lg:h-auto;
+  }
+  .group--h2 {
+    @apply w-9 h-20 relative text-4xl fontWeight--bold;
+  }
+  .group--h2::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-color: #aa6666;
+    @apply absolute left-7 top-16 rounded-full border-8 opacity-60;
+  }
+}
